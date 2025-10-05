@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-secondary shadow">
+<nav class="navbar navbar-expand-lg bg-body-secondary shadow" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="{{ route('homepage') }}">Presto.it</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
@@ -19,10 +19,12 @@
               Ciao, {{ Auth::user()->name }}
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <hr class="dropdown-divider">
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
+              </li>
+              <form action="{{ route('logout') }}" method="post" class="d-none" id="form-logout"> {{-- Perché d-none??? --}}
+              @csrf
+              </form>
             </ul>
           </li>
         @else
