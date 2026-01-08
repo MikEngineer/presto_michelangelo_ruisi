@@ -25,6 +25,9 @@
               <form action="{{ route('logout') }}" method="post" class="d-none" id="form-logout"> {{-- Perché d-none??? --}}
               @csrf
               </form>
+              <li>
+                <a class="dropdown-item" href="{{ route('create.article') }}">Crea</a>
+              </li>
             </ul>
           </li>
         @else
