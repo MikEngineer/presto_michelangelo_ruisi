@@ -31,18 +31,28 @@
                 </div>
 
                 <div class="d-flex pb-4 justify-content-around">
-                    <form action="" method="POST">
+                    <form action="{{ route('reject', ['article' => $article_to_check]) }}" method="POST">
                         @csrf
+                        @method('PATCH')
                         <button class="btn btn-danger py-2 px-5 fw-bold">Rifiuta</button>
                     </form>
 
-                    <form action="" method="POST">
+                    <form action="{{ route('accept', ['article' => $article_to_check]) }}" method="POST">
                         @csrf
+                        @method('PATCH')
                         <button class="btn btn-success py-2 px-5 fw-bold">Accetta</button>
                     </form>
                 </div>
             </div>
         </div>
+        @if (session()->has('message'))
+            <div class="row justify-content-center">
+                <div class="col-5 alert alert-success text-center shadow rounded">
+                    {{ session('message') }}
+                </div>
+            </div>
+@endif
+
     @else
         <div class="row justify-content-center align-items-center height-custom text-center">
             <div class="col-12">
