@@ -41,11 +41,11 @@
           <button type="submit" class="input-group-text btn btn-outline-success" id="basic-addon2">Search</button>
         </div>
       </form>
-      
-      
-      
-      
-      
+
+      <x-_locale lang="it" />
+      <x-_locale lang="en" />
+      <x-_locale lang="es" />
+
       @auth
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" 
@@ -88,7 +88,7 @@
   </li>
   @endauth
   
-</ul>
-</div>
-</div>
+      </ul>
+    </div>
+  </div>
 </nav>
