@@ -40,7 +40,7 @@ class CreateArticleForm extends Component
             'title'       => $this->title,
             'description' => $this->description,
             'price'       => $this->price,
-            'category_id'    => $this->category,
+            'category_id' => $this->category,
             'user_id'     => Auth::id(),
         ]);
 
