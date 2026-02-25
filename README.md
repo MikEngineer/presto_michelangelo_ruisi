@@ -64,3 +64,7 @@ php artisan queue:work
 
 test@example.com
 Password123!
+
+#1CE5F3
+#004474
+#FFFFFF

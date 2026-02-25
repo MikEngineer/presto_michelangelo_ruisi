@@ -13,3 +13,340 @@
     height: 120px;
     width: 120px;
 }
+
+.navbar-logo {
+    height: 40px;
+    width: auto;
+}
+
+/* ======================================================================
+   PRESTO THEME — Bootstrap overrides (paste in resources/css/style.css)
+   Assumes this file is imported AFTER Bootstrap.
+   Palette:
+   - Primary: #004474
+   - Accent:  #1CE5F3
+   - White softened: #F4F8FA
+====================================================================== */
+
+/* ---------- Base tokens (your palette) ---------- */
+:root{
+  --presto-primary: #004474;
+  --presto-accent:  #1CE5F3;
+  --presto-bg:      #F4F8FA;   /* less “white” */
+  --presto-surface: #FFFFFF;
+  --presto-text:    #0b2b3a;
+  --presto-muted:   #5f7a8c;
+
+  --presto-radius:  14px;
+  --presto-shadow:  0 10px 26px rgba(0,0,0,.08);
+
+  /* Bootstrap core overrides */
+  --bs-primary: var(--presto-primary);
+  --bs-body-bg: var(--presto-bg);
+  --bs-body-color: var(--presto-text);
+
+  --bs-link-color: var(--presto-accent);
+  --bs-link-hover-color: #12c9d6;
+
+  --bs-border-color: rgba(0, 68, 116, .14);
+  --bs-secondary-color: var(--presto-muted);
+
+  --bs-border-radius: var(--presto-radius);
+  --bs-border-radius-sm: 12px;
+  --bs-border-radius-lg: 18px;
+
+  --bs-focus-ring-color: rgba(28, 229, 243, .35);
+  --bs-focus-ring-width: .22rem;
+
+  /* Typography (optional) */
+  --bs-font-sans-serif: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* ---------- Page base ---------- */
+body{
+  background: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
+a{ text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+/* ---------- Buttons (all .btn variants) ---------- */
+.btn{
+  --bs-btn-border-radius: var(--presto-radius);
+  --bs-btn-padding-x: 1rem;
+  --bs-btn-padding-y: .6rem;
+  --bs-btn-font-weight: 600;
+}
+
+.btn-primary{
+  --bs-btn-bg: var(--presto-primary);
+  --bs-btn-border-color: var(--presto-primary);
+  --bs-btn-color: #fff;
+
+  --bs-btn-hover-bg: #00365d;
+  --bs-btn-hover-border-color: #00365d;
+  --bs-btn-hover-color: #fff;
+
+  --bs-btn-active-bg: #002f51;
+  --bs-btn-active-border-color: #002f51;
+
+  --bs-btn-focus-shadow-rgb: 28,229,243;
+}
+
+.btn-outline-primary{
+  --bs-btn-color: var(--presto-primary);
+  --bs-btn-border-color: rgba(0,68,116,.45);
+
+  --bs-btn-hover-bg: var(--presto-primary);
+  --bs-btn-hover-border-color: var(--presto-primary);
+  --bs-btn-hover-color: #fff;
+
+  --bs-btn-active-bg: var(--presto-primary);
+  --bs-btn-active-border-color: var(--presto-primary);
+
+  --bs-btn-focus-shadow-rgb: 28,229,243;
+}
+
+/* Accent button (custom) */
+.btn-accent{
+  --bs-btn-bg: var(--presto-accent);
+  --bs-btn-border-color: var(--presto-accent);
+  --bs-btn-color: #003354;
+
+  --bs-btn-hover-bg: #12c9d6;
+  --bs-btn-hover-border-color: #12c9d6;
+  --bs-btn-hover-color: #003354;
+
+  --bs-btn-active-bg: #0fb9c6;
+  --bs-btn-active-border-color: #0fb9c6;
+
+  --bs-btn-focus-shadow-rgb: 28,229,243;
+}
+
+.btn-outline-accent{
+  --bs-btn-color: #007a86;
+  --bs-btn-border-color: rgba(28,229,243,.65);
+
+  --bs-btn-hover-bg: var(--presto-accent);
+  --bs-btn-hover-border-color: var(--presto-accent);
+  --bs-btn-hover-color: #003354;
+
+  --bs-btn-focus-shadow-rgb: 28,229,243;
+}
+
+/* ---------- Navbar ---------- */
+.navbar{
+  --bs-navbar-padding-y: .85rem;
+  --bs-navbar-brand-font-size: 1.1rem;
+  --bs-navbar-brand-color: #fff;
+
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.navbar.bg-primary,
+.navbar.navbar-dark{
+  background: var(--presto-primary) !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link{
+  color: rgba(255,255,255,.9) !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus{
+  color: var(--presto-accent) !important;
+}
+
+.navbar .navbar-toggler{
+  border-color: rgba(255,255,255,.25);
+}
+
+.navbar .navbar-toggler:focus{
+  box-shadow: 0 0 0 var(--bs-focus-ring-width) rgba(28,229,243,.35);
+}
+
+/* ---------- Cards ---------- */
+.card{
+  --bs-card-border-color: rgba(0,68,116,.12);
+  --bs-card-border-radius: var(--presto-radius);
+  --bs-card-bg: var(--presto-surface);
+  box-shadow: var(--presto-shadow);
+}
+
+.card .card-header{
+  background: rgba(0,68,116,.03);
+  border-bottom-color: rgba(0,68,116,.10);
+}
+
+/* ---------- Alerts ---------- */
+.alert{
+  --bs-alert-border-radius: var(--presto-radius);
+}
+
+.alert-primary{
+  --bs-alert-bg: rgba(0,68,116,.08);
+  --bs-alert-color: #003354;
+  --bs-alert-border-color: rgba(0,68,116,.18);
+}
+
+/* ---------- Badges ---------- */
+.badge{
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.badge.bg-primary{ background: var(--presto-primary) !important; }
+.badge.bg-info{ background: var(--presto-accent) !important; color:#003354 !important; }
+
+/* ---------- Forms (inputs, selects, textarea, checks) ---------- */
+.form-control,
+.form-select{
+  border-radius: var(--presto-radius);
+  border-color: rgba(0,68,116,.18);
+  background: var(--presto-surface);
+}
+
+.form-control:focus,
+.form-select:focus{
+  border-color: rgba(28,229,243,.95);
+  box-shadow: 0 0 0 var(--bs-focus-ring-width) rgba(28,229,243,.25);
+}
+
+.form-check-input:checked{
+  background-color: var(--presto-primary);
+  border-color: var(--presto-primary);
+}
+
+.form-check-input:focus{
+  box-shadow: 0 0 0 var(--bs-focus-ring-width) rgba(28,229,243,.25);
+  border-color: rgba(28,229,243,.95);
+}
+
+.form-range::-webkit-slider-thumb{
+  background: var(--presto-accent);
+}
+
+/* ---------- Dropdowns ---------- */
+.dropdown-menu{
+  --bs-dropdown-border-radius: var(--presto-radius);
+  --bs-dropdown-border-color: rgba(0,68,116,.12);
+  --bs-dropdown-link-hover-bg: rgba(28,229,243,.16);
+  --bs-dropdown-link-active-bg: var(--presto-primary);
+  --bs-dropdown-link-active-color: #fff;
+  box-shadow: var(--presto-shadow);
+}
+
+/* ---------- Tables ---------- */
+.table{
+  --bs-table-border-color: rgba(0,68,116,.14);
+}
+
+.table thead th{
+  background: rgba(0,68,116,.04);
+  color: #003354;
+  border-bottom-color: rgba(0,68,116,.14);
+}
+
+/* ---------- Pagination ---------- */
+.pagination{
+  --bs-pagination-border-radius: var(--presto-radius);
+  --bs-pagination-color: var(--presto-primary);
+  --bs-pagination-hover-color: #00365d;
+  --bs-pagination-focus-box-shadow: 0 0 0 var(--bs-focus-ring-width) rgba(28,229,243,.25);
+  --bs-pagination-active-bg: var(--presto-primary);
+  --bs-pagination-active-border-color: var(--presto-primary);
+}
+
+/* ---------- Nav tabs/pills ---------- */
+.nav-tabs{
+  border-bottom-color: rgba(0,68,116,.14);
+}
+
+.nav-tabs .nav-link{
+  border-radius: var(--presto-radius) var(--presto-radius) 0 0;
+}
+
+.nav-tabs .nav-link.active{
+  border-color: rgba(0,68,116,.14) rgba(0,68,116,.14) transparent;
+  color: #003354;
+}
+
+.nav-pills .nav-link.active{
+  background: var(--presto-primary);
+}
+
+/* ---------- Accordion ---------- */
+.accordion{
+  --bs-accordion-border-radius: var(--presto-radius);
+  --bs-accordion-border-color: rgba(0,68,116,.12);
+  --bs-accordion-active-bg: rgba(28,229,243,.16);
+  --bs-accordion-active-color: #003354;
+}
+
+.accordion-button:focus{
+  box-shadow: 0 0 0 var(--bs-focus-ring-width) rgba(28,229,243,.25);
+}
+
+/* ---------- List group ---------- */
+.list-group{
+  --bs-list-group-border-radius: var(--presto-radius);
+  --bs-list-group-border-color: rgba(0,68,116,.12);
+  --bs-list-group-active-bg: var(--presto-primary);
+  --bs-list-group-active-border-color: var(--presto-primary);
+}
+
+/* ---------- Breadcrumb ---------- */
+.breadcrumb{
+  --bs-breadcrumb-divider-color: rgba(0,68,116,.35);
+}
+
+/* ---------- Progress ---------- */
+.progress{
+  --bs-progress-border-radius: 999px;
+  background: rgba(0,68,116,.10);
+}
+
+.progress-bar{
+  background: var(--presto-primary);
+}
+
+/* ---------- Modal ---------- */
+.modal-content{
+  border-radius: var(--presto-radius);
+  border-color: rgba(0,68,116,.12);
+  box-shadow: var(--presto-shadow);
+}
+
+.modal-header{
+  border-bottom-color: rgba(0,68,116,.10);
+}
+
+.modal-footer{
+  border-top-color: rgba(0,68,116,.10);
+}
+
+/* ---------- Toasts ---------- */
+.toast{
+  border-radius: var(--presto-radius);
+  border-color: rgba(0,68,116,.12);
+  box-shadow: var(--presto-shadow);
+}
+
+/* ---------- Offcanvas ---------- */
+.offcanvas{
+  --bs-offcanvas-border-color: rgba(0,68,116,.12);
+}
+
+/* ---------- Spinners ---------- */
+.spinner-border.text-primary{ color: var(--presto-primary) !important; }
+
+/* ---------- Utility helpers (optional) ---------- */
+.bg-presto{
+  background: var(--presto-primary) !important;
+  color: #fff !important;
+}
+.text-presto{ color: var(--presto-primary) !important; }
+.text-accent{ color: var(--presto-accent) !important; }
+.border-presto{ border-color: rgba(0,68,116,.22) !important; }
