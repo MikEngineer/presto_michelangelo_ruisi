@@ -6,7 +6,7 @@
   </div>
 
   <div class="container text-center">
-    <p class="mb-1">&copy; 2025 Presto.it. {{__('ui.copyright')}}</p>
+    <p class="mb-1">&copy; 2026 Presto.it. {{__('ui.copyright')}}</p>
     <a href="#" class="text-light me-3">Privacy Policy</a>
     <a href="#" class="text-light">{{__('ui.contacts')}}</a>
   </div>
